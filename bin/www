@@ -6,7 +6,6 @@
 
 var app = require('../app');
 var http = require('http');
-var ip = require('ip');
 var chalk = require('chalk');
 
 /**
@@ -14,7 +13,7 @@ var chalk = require('chalk');
  */
 
 var port = normalizePort(process.env.PORT || '3102');
-var host = process.env.HOST || ip.address();
+var host = process.env.HOST || 'localhost';
 
 /**
  * Create HTTP server.
@@ -83,6 +82,6 @@ function onError(error) {
  */
 
 function onListening() {
-    var addressHttp = 'http://' + server.address().address + ':' + server.address().port;
+    var addressHttp = 'http://localhost:' + server.address().port;
     console.log('Server listening on ' + chalk.inverse.green(addressHttp));
 }
