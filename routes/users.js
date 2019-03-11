@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get('/count_online', function(req, res, next) {
+router.get('/statistics', function(req, res, next) {
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({ count_online: randomInteger(50, 1000) }));
 });
