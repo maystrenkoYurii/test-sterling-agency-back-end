@@ -13,7 +13,7 @@ var chalk = require('chalk');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3003');
+var port = normalizePort(process.env.PORT || '3102');
 var host = process.env.HOST || ip.address();
 
 /**
